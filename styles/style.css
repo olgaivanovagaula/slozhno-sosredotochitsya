@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  margin: 0;
+  margin: 0 auto;
   color: var(--text-color, #F1B2CE);
   font-family: var(--main-font, sans-serif);
   background: var(--bg-image) no-repeat top center;
@@ -207,6 +207,7 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid var(--button-hover);
+  cursor: pointer;
 }
 
 .content__link:hover {
@@ -272,7 +273,7 @@
   .content__block:first-of-type {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px
+    gap: 20px;
   }
 
   .content__block:not(:first-of-type) {
@@ -287,33 +288,31 @@
   .content__block:nth-of-type(3) {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px
+    gap: 20px;
   }
 
   .content__block:nth-of-type(4) {
     display: grid;
     grid-template-rows: min-content 1fr;
-    gap: 20px
+    gap: 20px;
   }
 
   .content__block:nth-of-type(2) .title {
     margin-inline-end: 70%;
   }
 
-
   .content__block-pictures {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    height: 780px;
+    height: clamp(48.75rem, -0.563rem + 102.73vw, 65.188rem);
   }
 
   .content__picture {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  
   }
 
   .content__picture:nth-of-type(1) {
@@ -336,6 +335,10 @@
     grid-area: 3/2/4/4 ;
   }
 
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
 }
 
 @media (1024px <= width) {
@@ -347,10 +350,29 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-block-start: 20px;
+    margin-block-start: 5px;
   }
 
   .header__description {
     margin-block-end: 5px;
   }
+
+  .content__block:first-of-type {
+    gap: 12px;
+  }
+
+  .content__block:nth-of-type(3) {
+    gap: 12px;
+  }
+
+  .content__block:nth-of-type(2) {
+     display: grid;
+     grid-template-rows: min-content 1fr;
+  }
+
+  .content__block:nth-of-type(2) .content__block-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+ }
+
 }
