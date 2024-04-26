@@ -4,7 +4,7 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   margin: 0 auto;
   color: var(--text-color, #F1B2CE);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   background: var(--bg-image) no-repeat top center;
   background-color: var(--bg-color);
   background-attachment: fixed;
@@ -101,7 +101,7 @@
 
 .header__theme-menu-button {
   font-size: 18px;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   background-color: transparent;
   color: var(--button);
   border: none;
@@ -134,6 +134,10 @@
   background-color: var(--accent-color);
 }
 
+.content__block:nth-of-type(3) .title-decor {
+  margin-block-end: 20px;
+}
+
 .content {
   margin-block-start: 40px;
 }
@@ -163,6 +167,8 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
+  color: var(--subtitle-decor-color);
+  background-color: var(--accent-color);
 }
 
 .content__block-pictures {
@@ -171,6 +177,7 @@
   gap: 10px;
   margin-block-end: 40px;
   margin-block-start: 10px;
+  justify-content: center;
 }
 
 .content__picture {
@@ -195,8 +202,8 @@
 }
 
 .header__theme-menu-button_active {
-  pointer-events: none;
   outline: 1px solid var(--button);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -266,7 +273,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    height: clamp(48.75rem, -0.563rem + 102.73vw, 65.188rem);
+    height: clamp(48.75rem, -1.5rem + 104.69vw, 65.5rem);
   }
 
   .content__block:first-of-type {
