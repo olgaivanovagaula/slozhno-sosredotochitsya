@@ -12,6 +12,7 @@
   padding: 0 10px;
   min-inline-size: 375px;
   font-size: 18px;
+  max-inline-size: 1024px;
 }
 
 .header {
